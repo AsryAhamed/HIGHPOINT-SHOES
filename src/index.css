@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-primary bg-white antialiased;
+  }
+
+  img {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white text-sm font-medium px-4 py-2.5 rounded-lg 
+           active:scale-95 transition-all duration-150 disabled:opacity-50 
+           disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary text-sm font-medium px-4 py-2.5 
+           rounded-lg active:scale-95 transition-all duration-150;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white text-sm font-medium px-4 py-2.5 rounded-lg 
+           active:scale-95 transition-all duration-150;
+  }
+
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white text-sm font-medium px-4 py-2.5 rounded-lg 
+           active:scale-95 transition-all duration-150 flex items-center gap-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;
+  }
+
+  .input {
+    @apply w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm 
+           focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary
+           transition-all duration-150;
+  }
+
+  .label {
+    @apply block text-xs font-medium text-muted mb-1.5;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-primary tracking-tight;
+  }
+
+  .square-img {
+    @apply w-full aspect-square object-cover;
+  }
+}
+
+/* Embla Carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
